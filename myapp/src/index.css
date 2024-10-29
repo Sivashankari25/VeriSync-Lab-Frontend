@@ -1,0 +1,144 @@
+/* Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 0;
+  min-height: 120vh;
+  overflow-x: hidden;
+  background-image: url('photo.gif'); /* Matrix-style background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Main Container Styling */
+.container {
+  max-width: 1800px;          /* Maximum width of the container */
+  width: 130%;                /* Width that you prefer */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(168, 213, 186, 0.3);
+  overflow: hidden;           /* Prevent outer scroll bar */
+  max-height: 80vh;           /* Set max height for scrolling */
+  background: rgba(255, 245, 224, 0.9); /* Light beige background */
+  position: relative;         /* Required for proper centering */
+  left: 50%;                  /* Move to the center from the left */
+  transform: translateX(-50%); /* Pull it back to center */
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #5a3e36; /* Darker beige for contrast */
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Search and Sort Inputs */
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  background: rgba(255, 245, 224, 0.9); /* Light beige background */
+  color: #5a3e36; /* Darker text */
+}
+
+/* User List and Cards */
+.user-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto; /* Allow scrolling within the user list */
+  max-height: 60vh; /* Limit height for scrolling */
+}
+
+/* User Card */
+.user-card {
+  background: rgba(186, 146, 105, 0.8); /* Darker beige background */
+  border: 2px solid rgba(170, 135, 99, 0.7); /* Beige border */
+  padding: 20px;
+  flex: 1 1 250px;
+  position: relative;
+  border-radius: 15px; /* Increased border-radius for a smoother edge */
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Lighter shadow for a soft effect */
+  cursor: pointer;
+}
+
+.user-card h3 {
+  color: #ece2c6; /* Light text color for better contrast */
+  font-size: 1.2em;
+}
+
+.user-card p {
+  color: #e2cfc7; /* Soft lighter beige for text */
+  opacity: 0.85;
+}
+
+/* Hover effect */
+.user-card:hover {
+  transform: scale(1.05);
+  background: rgba(200, 150, 100, 0.9); /* Slightly lighter for hover effect */
+}
+
+/* Modal Styling */
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: rgba(255, 245, 224, 0.95); /* Light beige background for modal */
+  padding: 25px;
+  border-radius: 12px;
+  width: 350px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+}
+
+.modal h2 {
+  color: #5a3e36; /* Dark beige for modal title */
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.modal p {
+  color: #8b6f57; /* Soft beige for modal text */
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #5a3e36; /* Dark beige for close button */
+  font-weight: bold;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 600px) {
+  .user-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

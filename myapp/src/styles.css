@@ -1,0 +1,101 @@
+/* User List and Cards */
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.user-card {
+  background: rgba(20, 20, 40, 0.6); /* Darker, semi-transparent background */
+  border: 1px solid rgba(0, 191, 255, 0.4); /* Blue border for focus */
+  padding: 20px;
+  flex: 1 1 250px;
+  position: relative;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.user-card h3 {
+  color: #d7e2ed; /* Lighter blue */
+  font-size: 1.2em;
+}
+
+.user-card p {
+  color: #dbe3ed; /* Soft gray-blue text */
+  opacity: 0.85;
+}
+
+/* Hover effect */
+.user-card:hover {
+  transform: scale(1.05);
+  background: rgba(25, 25, 50, 0.7); /* Brighter for contrast */
+}
+
+.user-card .view-details {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #e2e8ea; /* Electric blue button */
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.user-card:hover .view-details {
+  display: block;
+}
+
+/* Modal Styling */
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: rgba(15, 15, 35, 0.95); /* Dark background with higher opacity */
+  padding: 25px;
+  border-radius: 12px;
+  width: 350px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+}
+
+.modal h2 {
+  color: #00BFFF; /* Electric blue */
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.modal p {
+  color: #B0C4DE;
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #00BFFF;
+  font-weight: bold;
+}
